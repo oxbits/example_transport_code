@@ -1,5 +1,10 @@
+# Transport Take Home Exercise
+
+Code submission per the document Transport "Take Home Exercise (1).pdf"
 
 
+
+```
 % http POST https://rqzhkvrwdc.execute-api.us-east-1.amazonaws.com/dev/metric/ox <<< '{"value": 42}'
 HTTP/1.1 200 OK
 Connection: keep-alive
@@ -17,8 +22,10 @@ x-amzn-Remapped-Content-Length: 2
 x-amzn-RequestId: 607ff54c-9a90-4b91-9158-cb50c3577b32
 
 {}
+```
 
 
+```
 % http https://rqzhkvrwdc.execute-api.us-east-1.amazonaws.com/dev/metric/ox/sum
 HTTP/1.1 200 OK
 Connection: keep-alive
@@ -38,8 +45,10 @@ x-amzn-RequestId: cb84690d-42d9-487d-9480-a884e8322889
 {
     "value": 42
 }
+```
 
 
+```
 % http https://rqzhkvrwdc.execute-api.us-east-1.amazonaws.com/dev/metric/ox/sum
 HTTP/1.1 200 OK
 Connection: keep-alive
@@ -59,8 +68,10 @@ x-amzn-RequestId: 801b458f-13bd-4a32-a21f-926737b8f03f
 {
     "value": 0
 }
+```
 
 
+```
 % http POST http://127.0.0.1:5000/metric/ox <<< '{"value": 42}'
 HTTP/1.0 200 OK
 Content-Length: 2
@@ -69,8 +80,10 @@ Date: Sat, 01 May 2021 23:01:07 GMT
 Server: Werkzeug/0.16.1 Python/3.8.9
 
 {}
+```
 
 
+```
 % http http://127.0.0.1:5000/metric/ox/sum
 HTTP/1.0 200 OK
 Content-Length: 13
@@ -81,8 +94,10 @@ Server: Werkzeug/0.16.1 Python/3.8.9
 {
     "value": 42
 }
+```
 
 
+```
 % http http://127.0.0.1:5000/metric/ox/sum
 HTTP/1.0 200 OK
 Content-Length: 12
