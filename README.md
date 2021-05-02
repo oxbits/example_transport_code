@@ -88,6 +88,8 @@ To setup your local workspace:
 
 % pip install -r requirements.txt
 
+% export FLASK_APP=app.py
+
 % pytest
 
 % flask run
