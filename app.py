@@ -45,8 +45,9 @@ def metric_sum(key):
 
 
 def local_metric_sum(key):
+    print('YO')
     file_list = os.listdir(DATA_DIR)
-    filtered_list = [item for item in file_list if key == item[: len(key)]]
+    filtered_list = [item for item in file_list if key == item[:len(key)]]
     threshold = int(
         datetime.datetime.utcnow().timestamp() * 1_000_000 - CACHE_MICROSECONDS
     )
@@ -58,7 +59,7 @@ def local_metric_sum(key):
     delete_list = [
         os.remove(os.path.join(DATA_DIR, item))
         for item in filtered_list
-        if int(item.split(".")[0].split("__")[1]) <= threshold
+        if int(item.split(".")[0].split("__")[-1]) <= threshold
     ]
     sum_list_values = [
         json.loads(open(os.path.join(DATA_DIR, item)).read())["value"]
