@@ -45,9 +45,9 @@ def metric_sum(key):
 
 
 def local_metric_sum(key):
-    print('YO')
+    print("YO")
     file_list = os.listdir(DATA_DIR)
-    filtered_list = [item for item in file_list if key == item[:len(key)]]
+    filtered_list = [item for item in file_list if key == item[: len(key)]]
     threshold = int(
         datetime.datetime.utcnow().timestamp() * 1_000_000 - CACHE_MICROSECONDS
     )
