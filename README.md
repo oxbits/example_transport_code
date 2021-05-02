@@ -72,27 +72,27 @@ HTTP/1.1 200 OK
 To setup your local workspace:
 
 ```
-% git clone https://github.com/oxbits/example_transport_code.git
+git clone https://github.com/oxbits/example_transport_code.git
 
-% pyenv install 3.8.9 # you may have to install this python version
+pyenv install 3.8.9 # you may have to install this python version
 
-% pyenv local 3.8.9
+pyenv local 3.8.9
 
-% pip install virtualenv # you may have to install virtualenv for this python version
+pip install virtualenv # you may have to install virtualenv for this python version
 
-% virtualenv -p python fenv
+virtualenv -p python fenv
 
-% source ./fenv/bin/activate
+source ./fenv/bin/activate
 
-% cd example_transport_code
+cd example_transport_code
 
-% pip install -r requirements.txt
+pip install -r requirements.txt
 
-% export FLASK_APP=app.py
+export FLASK_APP=app.py
 
-% pytest
+pytest
 
-% flask run
+flask run
 ```
 
 ### .env File Configuration:
