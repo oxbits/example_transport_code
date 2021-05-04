@@ -45,7 +45,6 @@ def metric_sum(key):
 
 
 def local_metric_sum(key):
-    print("YO")
     file_list = os.listdir(DATA_DIR)
     filtered_list = [item for item in file_list if key == item[: len(key)]]
     threshold = int(
